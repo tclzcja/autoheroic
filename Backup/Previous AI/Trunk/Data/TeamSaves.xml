@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfTeam xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Team>
+    <ID>169efdb9-017d-431a-a779-4305f2fdff6b</ID>
+    <Name>Fluffy Cloud</Name>
+    <Owner_Name>Elyse</Owner_Name>
+    <List_Character>
+      <Character>
+        <Tactics>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Attack</A>
+            <Data />
+          </Tactic>
+          <Tactic>
+            <Free>false</Free>
+            <C>Any</C>
+            <A>Charge</A>
+            <Data />
+          </Tactic>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Follow_Enemy</A>
+            <Data />
+          </Tactic>
+        </Tactics>
+        <ExhaustedActions />
+        <Name>Ser Fluffknight Lightstitcher</Name>
+        <ID>78b30dcc-724f-4598-a8c7-615b51dfd3c0</ID>
+        <Info>
+          <Class>Knight</Class>
+          <AIProfile>Warrior</AIProfile>
+          <Range>1</Range>
+          <MHP>5</MHP>
+          <Speed>4</Speed>
+          <Value>100</Value>
+          <List_Special_Ability>
+            <Action>Charge</Action>
+          </List_Special_Ability>
+        </Info>
+        <Stat>
+          <Position>
+            <X>1</X>
+            <Y>1</Y>
+          </Position>
+          <HP>5</HP>
+          <Cooldown>0</Cooldown>
+        </Stat>
+      </Character>
+      <Character>
+        <Tactics>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Attack</A>
+            <Data />
+          </Tactic>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Follow_Enemy</A>
+            <Data />
+          </Tactic>
+        </Tactics>
+        <ExhaustedActions />
+        <Name>Countess Elizabeth Stuffyfluff</Name>
+        <ID>4f451837-e49d-4688-bbba-836af6366f0a</ID>
+        <Info>
+          <Class>Soldier</Class>
+          <AIProfile>Warrior</AIProfile>
+          <Range>5</Range>
+          <MHP>4</MHP>
+          <Speed>3</Speed>
+          <Value>100</Value>
+          <List_Special_Ability />
+        </Info>
+        <Stat>
+          <Position>
+            <X>5</X>
+            <Y>0</Y>
+          </Position>
+          <HP>4</HP>
+          <Cooldown>0</Cooldown>
+        </Stat>
+      </Character>
+      <Character>
+        <Tactics>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Attack</A>
+            <Data />
+          </Tactic>
+          <Tactic>
+            <Free>false</Free>
+            <C>Is_Hurt</C>
+            <A>Heal</A>
+            <Data />
+          </Tactic>
+          <Tactic>
+            <Free>false</Free>
+            <C>Is_Hurt</C>
+            <A>Follow_Ally</A>
+            <Data />
+          </Tactic>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Follow_Enemy</A>
+            <Data />
+          </Tactic>
+        </Tactics>
+        <ExhaustedActions />
+        <Name>Lady Legolass Greenleaf</Name>
+        <ID>3204c8b7-3503-44d1-86d3-5288bc98c1ed</ID>
+        <Info>
+          <Class>Medic</Class>
+          <AIProfile>Warrior</AIProfile>
+          <Range>4</Range>
+          <MHP>3</MHP>
+          <Speed>3</Speed>
+          <Value>100</Value>
+          <List_Special_Ability>
+            <Action>Heal</Action>
+          </List_Special_Ability>
+        </Info>
+        <Stat>
+          <Position>
+            <X>3</X>
+            <Y>0</Y>
+          </Position>
+          <HP>3</HP>
+          <Cooldown>0</Cooldown>
+        </Stat>
+      </Character>
+      <Character>
+        <Tactics>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Attack</A>
+            <Data />
+          </Tactic>
+          <Tactic>
+            <Free>false</Free>
+            <C>Any</C>
+            <A>Charge</A>
+            <Data />
+          </Tactic>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Follow_Enemy</A>
+            <Data />
+          </Tactic>
+        </Tactics>
+        <ExhaustedActions />
+        <Name>Viscountess Cloud McStuffing</Name>
+        <ID>a378185e-47cc-48e4-a5c3-c632d742a515</ID>
+        <Info>
+          <Class>Knight</Class>
+          <AIProfile>Warrior</AIProfile>
+          <Range>1</Range>
+          <MHP>5</MHP>
+          <Speed>4</Speed>
+          <Value>100</Value>
+          <List_Special_Ability>
+            <Action>Charge</Action>
+          </List_Special_Ability>
+        </Info>
+        <Stat>
+          <Position>
+            <X>6</X>
+            <Y>1</Y>
+          </Position>
+          <HP>5</HP>
+          <Cooldown>0</Cooldown>
+        </Stat>
+      </Character>
+      <Character>
+        <Tactics>
+          <Tactic>
+            <Free>false</Free>
+            <C>Is_Medic</C>
+            <A>Snipe</A>
+            <Data />
+          </Tactic>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Attack</A>
+            <Data />
+          </Tactic>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Follow_Enemy</A>
+            <Data />
+          </Tactic>
+        </Tactics>
+        <ExhaustedActions />
+        <Name>Franz Skyfluffer III, Esq</Name>
+        <ID>78143df7-1607-4161-a1fd-455274438cfa</ID>
+        <Info>
+          <Class>Sniper</Class>
+          <AIProfile>Warrior</AIProfile>
+          <Range>5</Range>
+          <MHP>2</MHP>
+          <Speed>2</Speed>
+          <Value>100</Value>
+          <List_Special_Ability>
+            <Action>Snipe</Action>
+          </List_Special_Ability>
+        </Info>
+        <Stat>
+          <Position>
+            <X>4</X>
+            <Y>0</Y>
+          </Position>
+          <HP>2</HP>
+          <Cooldown>0</Cooldown>
+        </Stat>
+      </Character>
+      <Character>
+        <Tactics>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Attack</A>
+            <Data />
+          </Tactic>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Follow_Enemy</A>
+            <Data />
+          </Tactic>
+        </Tactics>
+        <ExhaustedActions />
+        <Name>Queen Skye McCloudington</Name>
+        <ID>eafdb7c8-4fcb-434e-b528-1f38bf030b8c</ID>
+        <Info>
+          <Class>Jerk</Class>
+          <AIProfile>Warrior</AIProfile>
+          <Range>4</Range>
+          <MHP>2</MHP>
+          <Speed>3</Speed>
+          <Value>50</Value>
+          <List_Special_Ability />
+        </Info>
+        <Stat>
+          <Position>
+            <X>0</X>
+            <Y>0</Y>
+          </Position>
+          <HP>2</HP>
+          <Cooldown>0</Cooldown>
+        </Stat>
+      </Character>
+    </List_Character>
+    <ScoreThings />
+  </Team>
+  <Team>
+    <ID>1443ef4a-e2da-4a61-8ffb-9d11dbdeb893</ID>
+    <Name>Alec's Team</Name>
+    <Owner_Name>Alec</Owner_Name>
+    <List_Character>
+      <Character>
+        <Tactics>
+          <Tactic>
+            <Free>false</Free>
+            <C>Almost_Dead</C>
+            <A>Attack</A>
+            <Data />
+          </Tactic>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Attack</A>
+            <Data />
+          </Tactic>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Follow_Enemy</A>
+            <Data />
+          </Tactic>
+        </Tactics>
+        <ExhaustedActions />
+        <Name>Bennett</Name>
+        <ID>fd069c8f-0b49-4ad3-b0fa-1a9a45bd5a57</ID>
+        <Info>
+          <Class>Soldier</Class>
+          <AIProfile>Warrior</AIProfile>
+          <Range>5</Range>
+          <MHP>4</MHP>
+          <Speed>3</Speed>
+          <Value>100</Value>
+          <List_Special_Ability />
+        </Info>
+        <Stat>
+          <Position>
+            <X>1</X>
+            <Y>1</Y>
+          </Position>
+          <HP>4</HP>
+          <Cooldown>0</Cooldown>
+        </Stat>
+      </Character>
+      <Character>
+        <Tactics>
+          <Tactic>
+            <Free>false</Free>
+            <C>Almost_Dead</C>
+            <A>Attack</A>
+            <Data />
+          </Tactic>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Attack</A>
+            <Data />
+          </Tactic>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Follow_Enemy</A>
+            <Data />
+          </Tactic>
+        </Tactics>
+        <ExhaustedActions />
+        <Name>Eric</Name>
+        <ID>c1c3ebcf-e325-4cdb-908d-5767a21391d0</ID>
+        <Info>
+          <Class>Soldier</Class>
+          <AIProfile>Warrior</AIProfile>
+          <Range>5</Range>
+          <MHP>4</MHP>
+          <Speed>3</Speed>
+          <Value>100</Value>
+          <List_Special_Ability />
+        </Info>
+        <Stat>
+          <Position>
+            <X>2</X>
+            <Y>1</Y>
+          </Position>
+          <HP>4</HP>
+          <Cooldown>0</Cooldown>
+        </Stat>
+      </Character>
+      <Character>
+        <Tactics>
+          <Tactic>
+            <Free>false</Free>
+            <C>Adjacent_2</C>
+            <A>Missile</A>
+            <Data />
+          </Tactic>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Attack</A>
+            <Data />
+          </Tactic>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Follow_Enemy</A>
+            <Data />
+          </Tactic>
+        </Tactics>
+        <ExhaustedActions />
+        <Name>Frank</Name>
+        <ID>79a81084-59fb-4f40-94d8-67ac7b06a47d</ID>
+        <Info>
+          <Class>Rocket</Class>
+          <AIProfile>Warrior</AIProfile>
+          <Range>3</Range>
+          <MHP>2</MHP>
+          <Speed>2</Speed>
+          <Value>100</Value>
+          <List_Special_Ability>
+            <Action>Missile</Action>
+          </List_Special_Ability>
+        </Info>
+        <Stat>
+          <Position>
+            <X>3</X>
+            <Y>1</Y>
+          </Position>
+          <HP>2</HP>
+          <Cooldown>0</Cooldown>
+        </Stat>
+      </Character>
+      <Character>
+        <Tactics>
+          <Tactic>
+            <Free>false</Free>
+            <C>Adjacent_2</C>
+            <A>Missile</A>
+            <Data />
+          </Tactic>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Attack</A>
+            <Data />
+          </Tactic>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Follow_Enemy</A>
+            <Data />
+          </Tactic>
+        </Tactics>
+        <ExhaustedActions />
+        <Name>Andy</Name>
+        <ID>73f9806f-02da-4ba0-85b8-27303f1863de</ID>
+        <Info>
+          <Class>Rocket</Class>
+          <AIProfile>Warrior</AIProfile>
+          <Range>3</Range>
+          <MHP>2</MHP>
+          <Speed>2</Speed>
+          <Value>100</Value>
+          <List_Special_Ability>
+            <Action>Missile</Action>
+          </List_Special_Ability>
+        </Info>
+        <Stat>
+          <Position>
+            <X>5</X>
+            <Y>1</Y>
+          </Position>
+          <HP>2</HP>
+          <Cooldown>0</Cooldown>
+        </Stat>
+      </Character>
+      <Character>
+        <Tactics>
+          <Tactic>
+            <Free>false</Free>
+            <C>Any</C>
+            <A>Snipe</A>
+            <Data />
+          </Tactic>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Attack</A>
+            <Data />
+          </Tactic>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Follow_Enemy</A>
+            <Data />
+          </Tactic>
+        </Tactics>
+        <ExhaustedActions />
+        <Name>Clara</Name>
+        <ID>f9b68ef0-966d-4163-8c2b-0aa703bc7710</ID>
+        <Info>
+          <Class>Sniper</Class>
+          <AIProfile>Warrior</AIProfile>
+          <Range>5</Range>
+          <MHP>2</MHP>
+          <Speed>2</Speed>
+          <Value>100</Value>
+          <List_Special_Ability>
+            <Action>Snipe</Action>
+          </List_Special_Ability>
+        </Info>
+        <Stat>
+          <Position>
+            <X>6</X>
+            <Y>1</Y>
+          </Position>
+          <HP>2</HP>
+          <Cooldown>0</Cooldown>
+        </Stat>
+      </Character>
+      <Character>
+        <Tactics>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Attack</A>
+            <Data />
+          </Tactic>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Follow_Enemy</A>
+            <Data />
+          </Tactic>
+        </Tactics>
+        <ExhaustedActions />
+        <Name>Charles</Name>
+        <ID>308f7368-6d45-4f26-9302-1c0b9f708f6d</ID>
+        <Info>
+          <Class>Jerk</Class>
+          <AIProfile>Warrior</AIProfile>
+          <Range>4</Range>
+          <MHP>2</MHP>
+          <Speed>3</Speed>
+          <Value>50</Value>
+          <List_Special_Ability />
+        </Info>
+        <Stat>
+          <Position>
+            <X>0</X>
+            <Y>0</Y>
+          </Position>
+          <HP>2</HP>
+          <Cooldown>0</Cooldown>
+        </Stat>
+      </Character>
+    </List_Character>
+    <ScoreThings />
+  </Team>
+  <Team>
+    <ID>a14177ff-c360-48e3-8da9-d3ebaeea254d</ID>
+    <Name>Fighting Wizards</Name>
+    <Owner_Name>Misha</Owner_Name>
+    <List_Character>
+      <Character>
+        <Tactics>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Attack</A>
+            <Data />
+          </Tactic>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Follow_Enemy</A>
+            <Data />
+          </Tactic>
+        </Tactics>
+        <ExhaustedActions />
+        <Name>John Smith</Name>
+        <ID>212b3a15-3326-4991-abbc-b390da9881d9</ID>
+        <Info>
+          <Class>Soldier</Class>
+          <AIProfile>Warrior</AIProfile>
+          <Range>5</Range>
+          <MHP>4</MHP>
+          <Speed>3</Speed>
+          <Value>100</Value>
+          <List_Special_Ability />
+        </Info>
+        <Stat>
+          <Position>
+            <X>0</X>
+            <Y>0</Y>
+          </Position>
+          <HP>4</HP>
+          <Cooldown>0</Cooldown>
+        </Stat>
+      </Character>
+      <Character>
+        <Tactics>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Attack</A>
+            <Data />
+          </Tactic>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Follow_Enemy</A>
+            <Data />
+          </Tactic>
+        </Tactics>
+        <ExhaustedActions />
+        <Name>John Smith</Name>
+        <ID>9eb659b7-5b03-4c6f-8438-b7491eeeccdf</ID>
+        <Info>
+          <Class>Soldier</Class>
+          <AIProfile>Warrior</AIProfile>
+          <Range>5</Range>
+          <MHP>4</MHP>
+          <Speed>3</Speed>
+          <Value>100</Value>
+          <List_Special_Ability />
+        </Info>
+        <Stat>
+          <Position>
+            <X>1</X>
+            <Y>0</Y>
+          </Position>
+          <HP>4</HP>
+          <Cooldown>0</Cooldown>
+        </Stat>
+      </Character>
+      <Character>
+        <Tactics>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Attack</A>
+            <Data />
+          </Tactic>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Follow_Enemy</A>
+            <Data />
+          </Tactic>
+        </Tactics>
+        <ExhaustedActions />
+        <Name>John Smith</Name>
+        <ID>a7609eed-566a-4dc2-97ef-a494d9b51426</ID>
+        <Info>
+          <Class>Soldier</Class>
+          <AIProfile>Warrior</AIProfile>
+          <Range>5</Range>
+          <MHP>4</MHP>
+          <Speed>3</Speed>
+          <Value>100</Value>
+          <List_Special_Ability />
+        </Info>
+        <Stat>
+          <Position>
+            <X>2</X>
+            <Y>0</Y>
+          </Position>
+          <HP>4</HP>
+          <Cooldown>0</Cooldown>
+        </Stat>
+      </Character>
+      <Character>
+        <Tactics>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Attack</A>
+            <Data />
+          </Tactic>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Follow_Enemy</A>
+            <Data />
+          </Tactic>
+        </Tactics>
+        <ExhaustedActions />
+        <Name>John Smith</Name>
+        <ID>d1d99c62-db27-4d5a-8e34-07e089c9147a</ID>
+        <Info>
+          <Class>Soldier</Class>
+          <AIProfile>Warrior</AIProfile>
+          <Range>5</Range>
+          <MHP>4</MHP>
+          <Speed>3</Speed>
+          <Value>100</Value>
+          <List_Special_Ability />
+        </Info>
+        <Stat>
+          <Position>
+            <X>3</X>
+            <Y>0</Y>
+          </Position>
+          <HP>4</HP>
+          <Cooldown>0</Cooldown>
+        </Stat>
+      </Character>
+      <Character>
+        <Tactics>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Attack</A>
+            <Data />
+          </Tactic>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Follow_Enemy</A>
+            <Data />
+          </Tactic>
+        </Tactics>
+        <ExhaustedActions />
+        <Name>John Smith</Name>
+        <ID>40898f49-73e6-4e3b-962c-9170c58c9c3a</ID>
+        <Info>
+          <Class>Soldier</Class>
+          <AIProfile>Warrior</AIProfile>
+          <Range>5</Range>
+          <MHP>4</MHP>
+          <Speed>3</Speed>
+          <Value>100</Value>
+          <List_Special_Ability />
+        </Info>
+        <Stat>
+          <Position>
+            <X>4</X>
+            <Y>0</Y>
+          </Position>
+          <HP>4</HP>
+          <Cooldown>0</Cooldown>
+        </Stat>
+      </Character>
+      <Character>
+        <Tactics>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Attack</A>
+            <Data />
+          </Tactic>
+          <Tactic>
+            <Free>true</Free>
+            <C>Any</C>
+            <A>Follow_Enemy</A>
+            <Data />
+          </Tactic>
+        </Tactics>
+        <ExhaustedActions />
+        <Name>John Smith</Name>
+        <ID>7ec00bb0-7406-4a8b-9a26-f0988b285c5f</ID>
+        <Info>
+          <Class>Soldier</Class>
+          <AIProfile>Warrior</AIProfile>
+          <Range>5</Range>
+          <MHP>4</MHP>
+          <Speed>3</Speed>
+          <Value>100</Value>
+          <List_Special_Ability />
+        </Info>
+        <Stat>
+          <Position>
+            <X>5</X>
+            <Y>0</Y>
+          </Position>
+          <HP>4</HP>
+          <Cooldown>0</Cooldown>
+        </Stat>
+      </Character>
+    </List_Character>
+    <ScoreThings />
+  </Team>
+</ArrayOfTeam>

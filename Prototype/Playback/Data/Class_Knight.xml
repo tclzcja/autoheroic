@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Character xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Class>Knight</Class>
+  <Range>2</Range>
+  <HP>15</HP>
+  <Mobility>2</Mobility>
+  <Tactic>    
+    <Tactic>
+      <T>Enemy</T>
+      <C>
+        <Condition>In_Range</Condition>
+      </C>
+      <A>Attack</A>
+    </Tactic>
+    <Tactic>
+      <T>Self</T>
+      <C>
+        <Condition>Any</Condition>
+      </C>
+      <A>Explore</A>
+    </Tactic>
+  </Tactic>
+</Character>

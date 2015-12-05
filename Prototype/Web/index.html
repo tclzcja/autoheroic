@@ -1,0 +1,281 @@
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body>
+  
+	<!--Alright, here we bring on board all the javascript files we'll be using. There are many of them.-->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type='text/javascript' src='knockout-2.2.1.js'></script>
+	<script type='text/javascript' src='jquery-1.10.2.min.js'></script>
+	
+	
+	<center><h1>Team Picker</h1></center>
+	Diagnostic: <strong data-bind="text: TM.TestLine()"></strong><br>
+	<font data-bind="foreach: TM.Errors"> <font color='red' data-bind="text: Text"></font> <br></font>
+	<br>
+	<table><tr><td>
+	<strong> Total Point Value: <span data-bind="text: TM.DisplayPoints()"></span> </strong><br>
+	</td></tr></table><br>
+
+	<font data-bind="foreach: TM.SoldierLines">
+	 <table><tr data-bind="foreach: Soldiers"><td id="Soldiers">
+		Name: <input  data-bind="value: Name"></input><br>
+		Type: <select data-bind="options: TM.AvailableSoldiers, value: Class, optionsText: 'ClassName'"></select><br>
+		Desc: <font data-bind="text: Description"></font><br>
+		Value: <font data-bind="text: Value"></font> [Base: <font data-bind="text: BaseValue"></font>]<br>
+		Health: <font data-bind="text: Health"></font><br>
+		Move: <font data-bind="text: Move"></font><br>
+		Attack Range: <font data-bind="text: ARange"></font><br>
+		Sp: <font data-bind="text: Special"></font><br>
+		<table><tr><td id="OverOrders">
+		<u>Orders</u> <button data-bind="click: AddOrder">+</button>
+		<table data-bind="foreach: Orders"><tr><td id="Orders">
+			<strong>Trigger: <select data-bind="options: TM.AvailableTriggers, value: Trigger, optionsText: 'Name'"></select></strong><br>
+			<font data-bind="visible: ShowDistance()">-Distance: <input size="3" data-bind="value: Distance"></input><br></font>
+			<strong>Action: <select data-bind="options: TM.AvailableActions, value: Action, optionsText: 'Name'"></select></strong><br>
+			<font data-bind="visible: ShowDestination()">-Destination: X:<input  size="3" data-bind="value: DestinationX"></input>
+				, Y:<input size="3" data-bind="value: DestinationY"></input><br></font>
+			<a href="#" data-bind="click: RemoveOrder">Remove</a><br>
+		</td></tr></table></td></tr></table>
+		<a href="#" data-bind="click: TM.removeSoldier">Remove</a><br>
+	</td></tr><tr><td></td></tr></table></font>
+
+	<button data-bind="click: TM.addSoldier">Add Soldier</button>
+	
+
+	<!--And here's the javascript.-->
+	<script>
+		
+		function ErrorLine(text) {
+			var self = this;
+			self.Text = text;
+		}
+
+		function SoldierLine() {
+			var self = this;
+			self.Soldiers = ko.observableArray([]);
+		}
+
+		//This gets us started and sets up the various menu options we have.
+		function setupScreen() {
+			var self = this;
+			Data = new DataManager();
+			TM = new TeamManager();
+			
+		}
+
+		//I guess this is where the meat of the work will be done.
+		function TeamManager() {
+			var self = this;
+			self.TestLine = ko.observable("--N/A--");
+			self.Errors = ko.observableArray([]);
+			self.Soldiers = ko.observableArray([]);
+			self.SoldierLines = ko.observableArray([]);
+
+			self.AddError = function(desc){
+				self.Errors.push(new ErrorLine(desc));
+			}
+
+			self.DisplayPoints = function(){
+				var r = 0;
+				for (var n = 0;n < self.Soldiers().length;n++){
+					r += self.Soldiers()[n].Value();
+				}
+				return r;
+			}
+
+			self.AvailableSoldiers = Data.GetSoldiers();
+			self.AvailableTriggers = Data.GetTriggers();
+			self.AvailableActions = Data.GetActions();
+
+			self.addSoldier = function() {
+		        self.Soldiers.push(new Soldier(self, self.AvailableSoldiers[0]));
+		        self.MakeSoldierLines();
+		    }
+
+		    self.MakeSoldierLines = function() {
+		    	self.SoldierLines([]);
+		        var line = new SoldierLine();
+		        for (var n = 0;n < self.Soldiers().length;n++){
+		        	line.Soldiers().push(self.Soldiers()[n]);
+		        	if (line.Soldiers().length >= 3){
+		        		self.SoldierLines().push(line);
+		        		line = new SoldierLine();
+		        	}
+		        }
+		        self.SoldierLines().push(line);
+		        //self.TestLine(self.SoldierLines()[0].Soldiers());
+		    }
+
+		    self.removeSoldier = function(n) { 
+		    	self.Soldiers.remove(n); 
+		    	self.MakeSoldierLines();
+		    }
+
+			self.Soldiers.push(new Soldier(self, self.AvailableSoldiers[0]));
+			self.Soldiers()[0].Name("Knight 1");
+			self.Soldiers.push(new Soldier(self, self.AvailableSoldiers[0]));
+			self.Soldiers()[1].Name("Knight 2");
+			self.Soldiers.push(new Soldier(self, self.AvailableSoldiers[0]));
+			self.Soldiers()[2].Name("Knight 3");
+			self.Soldiers.push(new Soldier(self, self.AvailableSoldiers[1]));
+			self.Soldiers()[3].Name("Archer 1");
+			self.Soldiers.push(new Soldier(self, self.AvailableSoldiers[1]));
+			self.Soldiers()[4].Name("Archer 2");
+			self.Soldiers.push(new Soldier(self, self.AvailableSoldiers[2]));
+			self.Soldiers()[5].Name("Mage 1");
+			self.MakeSoldierLines();
+
+			//TM.TestLine("A");
+			//self.AddError("Error 1");
+		}
+
+		function Order(soldier, trigger, action){
+			var self = this;
+			self.Soldier = soldier;
+			self.Trigger =  ko.observable(trigger);
+			self.Action =  ko.observable(action);
+			self.Distance =  ko.observable(5);
+			self.DestinationX =  ko.observable(0);
+			self.DestinationY =  ko.observable(0);
+			self.Value = 10;
+			self.RemoveOrder = function() { 
+				self.Soldier.Orders.splice(self.Soldier.Orders().indexOf(self),1);
+			}
+
+			self.ShowDistance = function(){
+				if (self.Action().Inputs.indexOf("Distance") != -1 || self.Trigger().Inputs.indexOf("Distance") != -1)
+					return true;
+				return false;
+			}
+
+			self.ShowDestination = function(){
+				if (self.Action().Inputs.indexOf("Destination") != -1 || self.Trigger().Inputs.indexOf("Destination") != -1)
+					return true;
+				return false;
+			}
+		}
+
+		function Soldier(tm, pickedClass) {
+			var self = this;
+			self.Class = ko.observable(pickedClass);
+			self.Name = ko.observable("--ENTER NAME--");
+			self.Description = ko.computed(function() { return self.Class().Description; });
+			self.Health = ko.computed(function() { return self.Class().Health; });
+			self.Move = ko.computed(function() { return self.Class().Move; });
+			self.ARange = ko.computed(function() { return self.Class().ARange; });
+			self.Special = ko.computed(function() { return self.Class().Special; });
+			self.Orders = ko.observableArray([]);
+			self.Value = ko.computed(function() { 
+				var r = self.Class().BaseValue;
+				for (var n = 0;n < self.Orders().length;n++){
+					r += self.Orders()[n].Value;
+				}
+				return r; });
+			self.BaseValue = ko.computed(function() { return self.Class().BaseValue; });
+			
+			self.AddOrder = function(){
+				self.Orders.push(new Order(self, tm.AvailableTriggers[0],tm.AvailableActions[0]));
+			}
+
+			self.Orders.push(new Order(self, tm.AvailableTriggers[0],tm.AvailableActions[1]));
+			//self.Orders.push(new Order("A","B"));
+		}
+
+		
+
+		//Uhh, just putting this code here for now. Doesn't do anything yet.
+		function SaveTeam(){    
+			var v = new  XMLWriter();
+			v.writeStartDocument(true);
+			v.writeElementString('test','Hello World');
+			v.writeAttributeString('foo','bar');
+			v.writeEndDocument();
+			console.log( v.flush() );
+		}
+
+		function DataManager() {
+			var self = this;
+
+			self.GetSoldiers = function(){
+				var r = [
+					{ClassName: "Knight",BaseValue: 100,Description: "A tough melee fighter.", Health: 3,Move: 5, ARange: 1, Special: "--"},
+					{ClassName: "Archer",BaseValue: 125,Description: "A long ranged attacker.", Health: 2,Move: 4, ARange: 6, Special: "--"},
+					{ClassName: "Mage",BaseValue: 150,Description: "A powerful nuker.", Health: 1,Move: 4, ARange: 5, Special: "Attack Has 1-Square AoE"}
+				];
+				return r;
+			}
+
+			self.GetTriggers = function(){
+				var r = [];
+				r.push(new DefaultTrigger());
+				r.push(new NearEnemyTrigger());
+				r.push(new LowHPTrigger());
+				return r;
+			}
+
+			self.GetActions = function(){
+				var r = [];
+				r.push(new MoveAction());
+				r.push(new AttackClosestAction());
+				r.push(new RetreatAction());
+				return r;
+			}
+
+		}
+
+		function AITrigger(name){
+			var self = this;
+			self.Name = name;
+			self.Inputs = [];
+		}
+
+		function DefaultTrigger(){
+			var r = new AITrigger("Default Action");
+			return r;
+		}
+		function NearEnemyTrigger(){
+			var r = new AITrigger("Enemy Nearby");
+			r.Inputs.push("Distance");
+			return r;
+		}
+		function LowHPTrigger(){
+			var r = new AITrigger("Low Health");
+			return r;
+		}
+
+		function AIAction(name){
+			var self = this;
+			self.Name = name;
+			self.Inputs = [];
+		}
+
+		function AttackClosestAction(){
+			var r = new AIAction("Attack Closest Enemy");
+			return r;
+		}
+		function MoveAction(){
+			var r = new AIAction("Move To Location");
+			r.Inputs.push("Destination");
+			return r;
+		}
+		function RetreatAction(){
+			var r = new AIAction("Retreat");
+			return r;
+		}
+		function GuardAction(){
+			var r = new AIAction("Stand Guard");
+			return r;
+		}
+
+
+		ko.applyBindings(new setupScreen());
+	</script>
+  </body>
+</html>

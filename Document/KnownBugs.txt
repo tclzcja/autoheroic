@@ -1,0 +1,12 @@
+No way to stop a battle in the middle -- EDIT: Escape just hard quits now;non-ideal.
+Added characters don't find empty slots to start on.
+The starting area thing is several kinds of jacked.
+You don't autoselect freshly created characters.
+Victory Screen not color-coded
+Camera Angle Bad
+Jump legs let you end movement on occupied squares.
+
+
+----
+
+Can't tell costs of body parts easily

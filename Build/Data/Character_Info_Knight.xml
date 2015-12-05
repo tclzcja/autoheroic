@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Character_Info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Class>Knight</Class>
+  <AIProfile>Warrior</AIProfile>
+  <Range>1</Range>
+  <MHP>5</MHP>
+  <Speed>4</Speed>
+  <Value>100</Value>
+  <List_Special_Ability>
+    <Action>Charge</Action>
+  </List_Special_Ability>
+  <List_Tactic>    
+    <Tactic>
+      <C>Any</C>
+      <A>Attack</A>
+    </Tactic>
+    <Tactic>
+      <C>Any</C>
+      <A>Charge</A>
+    </Tactic>
+    <Tactic>
+      <C>Any</C>
+      <A>Follow_Enemy</A>
+    </Tactic>
+  </List_Tactic>
+</Character_Info>

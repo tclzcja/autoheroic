@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfArrayOfTerrain xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ArrayOfTerrain>
+    <Terrain>Grass</Terrain>
+    <Terrain>Desert</Terrain>
+    <Terrain>Grass</Terrain>
+    <Terrain>Grass</Terrain>
+    <Terrain>Grass</Terrain>
+  </ArrayOfTerrain>
+  <ArrayOfTerrain>
+    <Terrain>Grass</Terrain>
+    <Terrain>Grass</Terrain>
+    <Terrain>Grass</Terrain>
+    <Terrain>Grass</Terrain>
+    <Terrain>Grass</Terrain>
+  </ArrayOfTerrain>
+  <ArrayOfTerrain>
+    <Terrain>Grass</Terrain>
+    <Terrain>Grass</Terrain>
+    <Terrain>Grass</Terrain>
+    <Terrain>Grass</Terrain>
+    <Terrain>Grass</Terrain>
+  </ArrayOfTerrain>
+  <ArrayOfTerrain>
+    <Terrain>Grass</Terrain>
+    <Terrain>Grass</Terrain>
+    <Terrain>Grass</Terrain>
+    <Terrain>Grass</Terrain>
+    <Terrain>Grass</Terrain>
+  </ArrayOfTerrain>
+  <ArrayOfTerrain>
+    <Terrain>Grass</Terrain>
+    <Terrain>Grass</Terrain>
+    <Terrain>Grass</Terrain>
+    <Terrain>Grass</Terrain>
+    <Terrain>Grass</Terrain>
+  </ArrayOfTerrain>
+</ArrayOfArrayOfTerrain>
